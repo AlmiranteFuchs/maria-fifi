@@ -1,5 +1,9 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './views/App.vue';
+import { router } from './router';
 
-createApp(App).mount('#app')
+import './styles/global.scss'; // 🌸 central styles imported here
+
+createApp(App)      // ← App.vue is the root component
+    .use(router)      // ← attach Vue Router
+    .mount('#app');   // ← mount it to <div id="app">
