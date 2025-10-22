@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="logo">
-      🐇 Crafty Bunnies
+      Maria Fifi Artes
     </div>
 
     <nav class="nav-links">
@@ -23,37 +23,22 @@ export default {
 };
 </script>
 
-<style scoped>
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #ffebf0; /* cute pastel pink */
-  border-bottom: 2px solid #ff99cc;
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* artsy vibes >:3 */
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #ff3399;
-}
+<style scoped lang="scss">
 
 .nav-links a {
   margin: 0 1rem;
   text-decoration: none;
-  color: #cc0066;
+  color: $color-pink;
   font-weight: bold;
   transition: color 0.2s;
 }
 
 .nav-links a.router-link-active {
-  color: #ff0066;
+  color: $color-blue-mint;
 }
 
 .nav-links a:hover {
-  color: #ff3399;
+  color: $color-blue-mint;
 }
 
 .cart {

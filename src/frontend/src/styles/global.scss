@@ -1,8 +1,8 @@
-@import './variables.scss';
+@use './variables' as *;
 
 body {
   font-family: $font-main;
-  background-color: $color-yellow;
+  background-color: $color-pink-lighter;
   margin: 0;
   padding: 0;
   color: #333;
@@ -16,4 +16,21 @@ a {
 button {
   border-radius: $border-radius;
   transition: background-color $transition, color $transition;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: $color-yellow;
+  border-bottom: 2px solid $color-pink-light;
+}
+
+.logo {
+  font-family: $font-fancy;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2.8rem;
+  color: $color-pink;
 }
