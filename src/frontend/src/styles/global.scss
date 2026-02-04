@@ -18,19 +18,70 @@ button {
   transition: background-color $transition, color $transition;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: $color-yellow;
-  border-bottom: 2px solid $color-pink-light;
+.cart {
+  font-size: 1.2rem;
+  position: relative;
 }
 
-.logo {
-  font-family: $font-fancy;
+.cart-count {
+  background: #ff3399;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+.btn {
+  background-color: $color-pink;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: $border-radius;
   font-weight: bold;
-  font-style: normal;
-  font-size: 2.8rem;
+  text-decoration: none;
+  transition: background-color $transition;
+
+  &:hover {
+    background-color: $color-blue-mint;
+  }
+}
+
+.card {
+  background-color: $color-yellow;
+  border: 1px solid #eee;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin: 0.3rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  h2, h3, h4 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  p {
+    color: #666;
+    line-height: 1.5;
+  }
+}
+
+.nav-links a {
+  margin: 0 1rem;
+  text-decoration: none;
   color: $color-pink;
+  font-weight: bold;
+  transition: color 0.2s;
+
+  &.router-link-active,
+  &:hover {
+    color: $color-blue-mint;
+  }
 }

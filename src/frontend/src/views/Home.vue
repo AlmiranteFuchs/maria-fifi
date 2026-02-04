@@ -1,59 +1,51 @@
 <template>
-  <header class="header">
-    <div class="logo">
-      Maria Fifi Artes
-    </div>
-
-    <nav class="nav-links">
-      <router-link to="/">Home</router-link>
-      <router-link to="/shop">Shop</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/contact">Contact</router-link>
-    </nav>
-
-    <div class="cart">
-      🛒 <span class="cart-count">3</span>
-    </div>
-  </header>
+  <Header/>
+  <div class="home">
+    <main class="main-content">
+      <section class="intro">
+        <h1>Welcome to Maria Fifi Artes</h1>
+        <p>Diverse handmade crafts made with love and a sprinkle of magic ✨</p>
+        <router-link to="/shop" class="btn">Shop Now</router-link>
+      </section>
+    </main>
+  </div>
 </template>
 
-<script lang="ts">
-export default {
-  name: "Header",
-};
+<script setup lang="ts">
+import Header from '@/components/Header.vue';
 </script>
 
 <style scoped lang="scss">
-
-.nav-links a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: $color-pink;
-  font-weight: bold;
-  transition: color 0.2s;
+.home {
+  background-color: $color-yellow;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
 }
 
-.nav-links a.router-link-active {
-  color: $color-blue-mint;
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
 }
 
-.nav-links a:hover {
-  color: $color-blue-mint;
-}
+.intro {
+  margin: 10rem;
+  border: 2px solid $color-yellow;
 
-.cart {
-  font-size: 1.2rem;
-  position: relative;
-}
+  h1 {
+    font-family: $font-main;
+    font-size: 2.5rem;
+    color: $color-pink;
+    margin-bottom: 1rem;
+  }
 
-.cart-count {
-  background: #ff3399;
-  color: white;
-  border-radius: 50%;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.8rem;
-  position: absolute;
-  top: -8px;
-  right: -10px;
+  p {
+    color: #555;
+    margin-bottom: 2rem;
+  }
 }
 </style>
